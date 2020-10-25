@@ -1,0 +1,135 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+$navbar-height: 4rem;
+$navbar-item-img-max-height: 3.5rem;
+$primary: rgb(168, 205, 100);
+
+// Import only what you need from Bulma
+@import "../mybulma/bulma/bulma.sass";
+
+.background-img {
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-size:  cover;
+}
+
+#home-banner {
+    background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.4) 0%), url("../assets/banner.png");
+}
+
+#chilla-banner {
+    background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.4) 0%), url("../assets/banner-chilla.png");
+}
+
+#lifeskill-banner {
+    background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.2) 0%), url("../assets/lifeskill_banner.png");
+}
+
+/*
+#intern-banner {
+    background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.2) 0%), url("../assets/intern-icon.png");
+}
+*/
+
+#navbar-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+}
+
+#navbar {
+    background: none;
+}
+
+.clickable>.column, .clickable>div>figure>img{
+    cursor: pointer;
+    transition: transform .5s;
+    
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    >a {
+        color: inherit;
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+#chilla-img {
+    background-image: url("../assets/chilla-image.png");
+    min-height: 300px;
+}
+
+a.no-decor {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+
+
+.charity-button>img {
+    background: rgb(206, 235, 152);
+
+    &:hover {
+        background: rgb(182, 212, 125);;
+    }
+
+    &.is-active {
+        background: $primary;
+    }
+}
+
+$charity-display-color: rgb(211, 234, 194); 
+.triangle-up {
+    // Triangle
+    width: 0; 
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid $charity-display-color;
+
+    // Centering
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charity-box {
+    background: $charity-display-color;
+}
+
+.warning-gradient-ltr {
+    background: linear-gradient(90deg, $warning 30%, transparent 80%);
+
+    @media (max-width: $tablet) {
+        background: linear-gradient(180deg, $warning 30%, transparent 100%);
+    }
+}
+
+.primary-gradient-rtl {
+    background: linear-gradient(-90deg, $primary 30%, transparent 80%);
+
+    @media (max-width: $tablet) {
+        background: linear-gradient(0deg, $primary 30%, transparent 100%);    
+    }
+}
+
+.beige-gradient-ltr {
+    background: linear-gradient(90deg, beige 30%, transparent 80%);
+    @media (max-width: $tablet) {
+        background: linear-gradient(180deg, beige 30%, transparent 100%);    
+    }
+}
+
+.grey-gradient-rtl {
+    background: linear-gradient(-90deg, $grey-light 30%, transparent 80%);
+    @media (max-width: $tablet) {
+        background: linear-gradient(0deg, $grey-light 30%, transparent 100%);    
+    }
+}
+
+.blue-gradient-ltr {
+    background: linear-gradient(90deg, skyblue 30%, transparent 80%);
+    @media (max-width: $tablet) {
+        background: linear-gradient(180deg, skyblue 30%, transparent 100%);    
+    }
+}

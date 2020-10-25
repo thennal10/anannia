@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anannia</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="scripts/common.js"></script>
+</head>
+<body>
+    <section class="hero {{ page.herosize }} background-img" id="{{page.banner}}-banner">
+        <div class="hero-head">
+            <nav class="navbar is-transparent" id="navbar-container" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="index.html">
+                        <figure class="image">
+                            <img src="assets/logo-white.png">
+                        </figure>
+                    </a>
+
+                    <a role="button" class="navbar-burger burger has-text-white" aria-label="menu" aria-expanded="false" data-target="navbar">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+            
+                <div id="navbar" class="navbar-menu is-size-5 is-family-secondary">
+                    <div class="navbar-end">
+                        <a class="navbar-item has-text-white" href="index.html">
+                            Home
+                        </a>
+            
+                        <a class="navbar-item has-text-white" href="index.html#projects">
+                            Projects
+                        </a>
+        
+                        <a class="navbar-item has-text-white" href="index.html#help">
+                            Help Us
+                        </a>
+        
+                        <a class="navbar-item has-text-white" href="interns.html">
+                            Join Us
+                        </a>
+        
+                        <a class="navbar-item has-text-white" href="index.html#contact">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="hero-body container">
+            {% if page.herobody %}
+                {% include {{ page.herobody }} %}
+            {% endif %}
+        </div>
+    </section>
+    {{ content }}
+    <footer class="footer mt-6">
+        <div class="columns is-mobile clickable is-centered has-text-centered">
+            <a href="https://www.facebook.com/Chilla.Kerala" class="column is-3-mobile is-1-tablet">
+                <figure class="image is-64x64">
+                    <img src="assets/f_logo_RGB-Black_58.png">
+                </figure>
+            </a>
+            <a href="https://www.instagram.com/anannia_india" class="column is-3-mobile is-1-tablet">
+                <figure class="image is-64x64">
+                    <img src="assets/instagram-logo.png">
+                </figure>
+            </a>
+            <a href="https://www.youtube.com/channel/UCaEoLbHBKn7gned1_oLnSFg" class="column is-3-mobile is-1-tablet">
+                <figure class="image is-64x64">
+                    <img src="assets/youtube_social_circle_dark.png">
+                </figure>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

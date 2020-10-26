@@ -93,95 +93,25 @@ title: Join Us
         </figure>
     </div>
     <div class="interns container is-max-desktop block is-size-5 is-size-6-mobile box has-background-primary-light">
-        <div>
-            <div class="columns is-multiline">
-                <div class="column is-2">
-                    <figure class="image is-square">
-                        <img class="is-rounded" src="assets/intern_linn.jpg">
-                    </figure>
-                </div>
-                <div class="column is-10">
-                    <div class="content">
-                        <div class="has-text-centered-mobile">
-                            <strong class="is-size-4-mobile">Linn Karlqvist</strong> 
-                            <small class="is-hidden-mobile">Tollare folkhogakola Sweden</small>
+        {% for intern in site.previous_interns %}
+            <div>
+                <div class="columns is-multiline">
+                    <div class="column is-2">
+                        <figure class="image is-square">
+                            <img class="is-rounded" src="{{ intern.image }}">
+                        </figure>
+                    </div>
+                    <div class="column is-10">
+                        <div class="content">
+                            <div class="has-text-centered-mobile">
+                                <strong class="is-size-4-mobile">{{ intern.name }}</strong> 
+                                <small class="is-hidden-mobile">{{ intern.university }}</small>
+                            </div>
+                            {{ intern.content }}
                         </div>
-                        <p class="has-text-justified-mobile">
-                            We spent time with the children, taught them English, art, culture, dance, and just
-                            gave them love! We loved the time at Chilla and the children gave us so much! Hopefully
-                            we gave them as much as they gave us :)
-                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div>
-            <div class="columns is-multiline">
-                <div class="column is-2">
-                    <figure class="image is-square">
-                        <img class="is-rounded" src="assets/frida.jpg">
-                    </figure>
-                </div>
-                <div class="column is-10">
-                    <div class="content">
-                        <div class="has-text-centered-mobile">
-                            <strong class="is-size-4-mobile">Frida Sundgren </strong>
-                            <small class="is-hidden-mobile">Ersta Skondal Hogskola Sweden</small>
-                        </div>
-                        <p class="has-text-justified-mobile">
-                            Working together with Chilla so far have been an amazing experience and everyone 
-                            involved with these kids and this organization is truly loving and helping people. 
-                            I am looking forward to the expansion of Chilla in the future.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="columns is-multiline">
-                <div class="column is-2">
-                    <figure class="image is-square">
-                        <img class="is-rounded" src="assets/emma.jpg">
-                    </figure>
-                </div>
-                <div class="column is-10">
-                    <div class="content">
-                        <div class="has-text-centered-mobile">
-                            <strong class="is-size-4-mobile">Emma Bergdahl</strong>    
-                            <small class="is-hidden-mobile">Mid Sweden University</small>
-                        </div>
-                        <p class="has-text-justified-mobile">
-                            Me and two classmates, Silje and Karolina started a fundraiser via Facebook,
-                            we had lessons in computer skills and english and just hung out with the kids. 
-                            We participated in some meetings with students and one work shop. I really enjoyed 
-                            spending time at Chilla and I think it's a genuine organization with good values.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="columns is-multiline">
-                <div class="column is-2">
-                    <figure class="image is-square">
-                        <img class="is-rounded" src="assets/rejil.jpg">
-                    </figure>
-                </div>
-                <div class="column is-10">
-                    <div class="content">
-                        <div class="has-text-centered-mobile">
-                            <strong class="is-size-4-mobile">Rejil Krishnan </strong>   
-                            <small class="is-hidden-mobile">Symbiosis International University, Pune</small> 
-                        </div>
-                        <p class="has-text-justified-mobile">
-                            Great experience. Learnt more about life than how it would be by reading materials 
-                            or watching things on television. Overall was proud to be associated with the team 
-                            and had a lot of fun with the children. My contributions might not have been great, 
-                            but I'm willing to help Chilla anytime even today.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>

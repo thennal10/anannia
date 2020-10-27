@@ -12,76 +12,33 @@ title: Center for Life Skill Education
             essential for their day to day life. The programme is structured in the form of summer camps for children at our premises 
             situated at Karakulam, Thiruvananthapuram. The camp includes a wide range of activities, listed below.
         </p>
-        <div class="columns beige-gradient-ltr mt-6">
-            <div class="column is-8">
-                <div class="columns is-vcentered">
-                    <div class="column p-0">
-                        <figure class="image is-3by2">
-                            <img src="assets/lifeskill_art1.JPG">    
-                        </figure>
-                    </div>
-                    <div class="column is-size-3 is-size-4-mobile">
-                        <p>Various arts and crafts classes to provide an outlet for the innate creativity of the children.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columns primary-gradient-rtl mt-6">
-            <div class="column is-8 is-offset-4">
-                <div class="columns is-vcentered">
-                    <div class="column is-size-3 has-text-right is-size-4-mobile has-text-centered-mobile">
-                        <p>The production of an original short film, created completely by the children.</p>
-                    </div>
-                    <div class="column p-0">
-                        <figure class="image is-3by2">
-                            <img src="assets/lifeskill_filmmaking.JPG">    
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columns warning-gradient-ltr mt-6">
-            <div class="column is-8">
-                <div class="columns is-vcentered">
-                    <div class="column p-0">
-                        <figure class="image is-16by9">
-                            <img src="assets/lifeskill_drama2.JPG">    
-                        </figure>
-                    </div>
-                    <div class="column is-size-3 is-size-4-mobile has-text-centered-mobile">
-                        <p>Theatre classes by award-winning professionals and performance opportunities in various venues.</p>
+        {% for activity in site.lifeskill_activities %}
+            <div class="columns {{ activity.gradient }}-gradient-{{ activity.direction }} mt-6">
+                <div class="column is-8 {% if activity.direction == "rtl" %} is-offset-4 {% endif %}">
+                    <div class="columns is-vcentered">
+                        {% if activity.direction == "rtl" %}
+                            <div class="column is-size-3 has-text-right is-size-4-mobile has-text-centered-mobile">
+                                {{ activity.content }}
+                            </div>
+                            <div class="column p-0">
+                                <figure class="image is-3by2">
+                                    <img src={{ activity.image }}>    
+                                </figure>
+                            </div>
+                        {% else %}
+                            <div class="column p-0">
+                                <figure class="image is-3by2">
+                                    <img src={{ activity.image }}>    
+                                </figure>
+                            </div>
+                            <div class="column is-size-3 is-size-4-mobile has-text-centered-mobile">
+                                {{ activity.content }}
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="columns grey-gradient-rtl mt-6">
-            <div class="column is-8 is-offset-4">
-                <div class="columns is-vcentered">
-                    <div class="column is-size-3 has-text-right is-size-4-mobile has-text-centered-mobile">
-                        <p>Exposure and training in various technologies to equip them with skills required in a technological world.</p>
-                    </div>
-                    <div class="column p-0">
-                        <figure class="image is-3by2">
-                            <img src="assets/lifeskill_tech.jpg">    
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="columns blue-gradient-ltr mt-6">
-            <div class="column is-8">
-                <div class="columns is-vcentered">
-                    <div class="column p-0">
-                        <figure class="image is-3by2">
-                            <img src="assets/lifeskill_study1.JPG">    
-                        </figure>
-                    </div>
-                    <div class="column is-size-3 is-size-4-mobile has-text-centered-mobile">
-                        <p>Personality development sessions and social awareness classes on topics like human rights, gender, and the environment</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>
 <section class="section container has-text-centered">

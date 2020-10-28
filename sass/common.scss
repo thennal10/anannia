@@ -16,14 +16,15 @@ $primary: rgb(168, 205, 100);
 }
 
 $banners: (
-    "home": "../assets/banner.png", 
-    "chilla": "../assets/banner-chilla.png", 
-    "lifeskill": "../assets/lifeskill_banner.png"
+    "home"  "../assets/banner.png" 0.4,
+    "chilla"  "../assets/banner-chilla.png" 0.4, 
+    "lifeskill"  "../assets/lifeskill_banner.png" 0.3,
+    "intern"  "../assets/intern_banner.png" 0.0
     );
 
-@each $name, $url in $banners {
+@each $name, $url, $overlay-percent in $banners {
   ##{$name}-banner {
-    background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.4) 0%), url($url);
+    background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, $overlay-percent) 0%), url($url);
   }
 }
 
@@ -109,4 +110,3 @@ $gradients:
         }
     }
 }
-

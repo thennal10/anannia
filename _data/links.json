@@ -1,8 +1,8 @@
 {
-    "home": "/anannia",
-    "projects": "/#projects",
-    "help": "/#help",
-    "contact": "/#contact",
+    "home": "./",
+    "projects": "./#projects",
+    "help": "./#help",
+    "contact": "./#contact",
     "about": "about",
     "chilla": "chilla",
     "lifeskill": "lifeskill",

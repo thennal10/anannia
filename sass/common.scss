@@ -16,10 +16,10 @@ $primary: rgb(168, 205, 100);
 }
 
 $banners: (
-    "home"  "../assets/banner.png" 0.4,
-    "chilla"  "../assets/banner-chilla.png" 0.4, 
-    "lifeskill"  "../assets/lifeskill_banner.png" 0.3,
-    "intern"  "../assets/intern_banner.png" 0.0
+    "home"  "../assets/banner.webp" 0.4,
+    "chilla"  "../assets/banner-chilla.webp" 0.4, 
+    "lifeskill"  "../assets/lifeskill_banner.webp" 0.3,
+    "intern"  "../assets/intern_banner.webp" 0.0
     );
 
 @each $name, $url, $overlay-percent in $banners {
@@ -56,7 +56,7 @@ $banners: (
 // On the project card
 // Set it as a background instead of just an image to resize more organically 
 #chilla-img {
-    background-image: url("../assets/chilla-image.png");
+    background-image: url("../assets/chilla-image.webp");
     min-height: 300px;
 }
 

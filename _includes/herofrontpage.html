@@ -1,6 +1,10 @@
 <div class="container has-text-centered">
     <a class="image is-96x96 container" href={{ site.data.links.about }}>
-        <img src="assets/logo-white.png">
+        <picture>
+            <source srcset="assets/logo-white.webp" type="image/webp">
+            <source srcset="assets/logo-white.png" type="image/png"> 
+            <img src="assets/logo-white.png">
+        </picture>
     </a>
     <p class="title is-size-1 is-size-3-mobile has-text-white">
         Sponsor a Smile

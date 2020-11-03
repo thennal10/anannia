@@ -1,7 +1,7 @@
 ---
 name: Emma Bergdahl
 university: Mid Sweden University
-image: assets/emma.jpg
+image: assets/emma.webp
 ---
 Me and two classmates, Silje and Karolina started a fundraiser via Facebook,
 we had lessons in computer skills and english and just hung out with the kids. 

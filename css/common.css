@@ -7558,16 +7558,16 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-size: cover; }
 
 #home-banner {
-  background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.4) 0%), url("../assets/banner.png"); }
+  background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.4) 0%), url("../assets/banner.webp"); }
 
 #chilla-banner {
-  background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.4) 0%), url("../assets/banner-chilla.png"); }
+  background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.4) 0%), url("../assets/banner-chilla.webp"); }
 
 #lifeskill-banner {
-  background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.3) 0%), url("../assets/lifeskill_banner.png"); }
+  background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.3) 0%), url("../assets/lifeskill_banner.webp"); }
 
 #intern-banner {
-  background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0) 0%), url("../assets/intern_banner.png"); }
+  background-image: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0) 0%), url("../assets/intern_banner.webp"); }
 
 /* Navbar */
 #navbar-container {
@@ -7587,7 +7587,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     text-decoration: none; }
 
 #chilla-img {
-  background-image: url("../assets/chilla-image.png");
+  background-image: url("../assets/chilla-image.webp");
   min-height: 300px; }
 
 /* "Want to help?" section */

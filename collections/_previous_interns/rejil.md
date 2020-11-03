@@ -1,7 +1,7 @@
 ---
 name: Rejil Krishnan
 university: Symbiosis International University, Pune
-image: assets/rejil.jpg
+image: assets/rejil.webp
 ---
 Great experience. Learnt more about life than how it would be by reading materials 
 or watching things on television. Overall was proud to be associated with the team 

@@ -7586,6 +7586,9 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     outline: none;
     text-decoration: none; }
 
+.object-fit-cover {
+  object-fit: cover; }
+
 #chilla-img {
   background-image: url("../assets/chilla-image.webp");
   min-height: 300px; }

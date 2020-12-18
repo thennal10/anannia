@@ -53,6 +53,11 @@ $banners: (
     }
 }
 
+// Take a wild guess
+.object-fit-cover {
+    object-fit: cover;
+}
+
 // On the project card
 // Set it as a background instead of just an image to resize more organically 
 #chilla-img {

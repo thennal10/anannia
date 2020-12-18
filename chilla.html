@@ -27,9 +27,11 @@ logourl: assets/chilla-logo-text.png
             {% for activity in site.general_activities reversed limit:3%}
                 <div class="column">
                     <div class="box pt-0 px-0 has-background-warning-light">
-                        <figure class="image is-16by9">
-                            <img src="assets/activity_images/{{activity.image}}" class="object-fit-cover">
-                        </figure>
+                        <picture class="image is-16by9">
+                            <source srcset="assets/activity_images/{{activity.image}}.webp" type="image/webp">
+                            <source srcset="assets/activity_images/{{activity.image}}.png" type="image/png">
+                            <img src="assets/activity_images/{{activity.image}}.png" class="object-fit-cover">
+                        </picture>
                         <p class="is-size-4 has-text-centered"><b> {{ activity.title }} </b></p>
                     </div>
                 </div>

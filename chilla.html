@@ -24,7 +24,7 @@ logourl: assets/chilla-logo-text.png
     <div class="container mt-6 p-4 has-background-info-light">
         <p class="title has-text-grey-dark">Recent Activities</p>
         <div class="columns">
-            {% for activity in site.general_activities %}
+            {% for activity in site.general_activities reversed limit:3%}
                 <div class="column">
                     <div class="box pt-0 px-0 has-background-warning-light">
                         <figure class="image is-16by9">

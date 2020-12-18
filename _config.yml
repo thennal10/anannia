@@ -30,6 +30,7 @@ github_username:  thennal10
 collections:
   - previous_interns
   - lifeskill_activities
+  - general_activities
 collections_dir: collections
 
   # Build settings

@@ -1,0 +1,29 @@
+---
+layout: default
+title: Activities
+banner: chilla
+herosize: is-medium
+herobody: herologo.html
+logourl: assets/chilla-logo-text.png
+---
+
+<section class="section">
+    <div class="container is-max-widescreen">
+        <p class="title">Recent Activities</p>
+        {% for activity in site.general_activities%}
+        <div class="columns box has-background-primary-light my-5 p-0">
+                <div class="column is-4 p-0">
+                    <picture class="image is-16by9">
+                        <source srcset="assets/activity_images/{{activity.image}}.webp" type="image/webp">
+                        <source srcset="assets/activity_images/{{activity.image}}.png" type="image/png">
+                        <img src="assets/activity_images/{{activity.image}}.png" class="object-fit-cover">
+                    </picture>
+                </div>
+                <div class="column is-size-5 is-size-6-mobile">
+                    <p class="is-size-4 is-size-5-mobile title">{{ activity.title }}</p>
+                    {{activity.content}}
+                </div>
+            </div>
+        {% endfor %}
+</div>
+</section>

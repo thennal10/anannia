@@ -24,7 +24,9 @@ logourl: assets/chilla-logo-text.png
     <div class="container mt-6 p-4 has-background-info-light">
         <p class="title has-text-grey-dark"><a href="{{site.data.links.activities}}">Recent Activities</a></p>
         <div class="columns clickable">
-            {% for activity in site.general_activities reversed limit:3%}
+            <!-- Assigning list reversesd to a seperate variable because of the way limit works -->
+            {% assign activities = site.general_activities | sort: 'date' | reverse %}
+            {% for activity in activities limit:3 %}
                 <div class="column">
                     <a href="{{site.data.links.activities}}">
                     <div class="box pt-0 px-0 has-background-warning-light">

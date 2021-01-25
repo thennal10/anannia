@@ -10,7 +10,7 @@ logourl: assets/chilla-logo-text.png
 <section class="section">
     <div class="container is-max-widescreen">
         <p class="title">Recent Activities</p>
-        {% for activity in site.general_activities%}
+        {% for activity in site.general_activities reversed%}
         <div class="columns box has-background-primary-light my-5 p-0">
                 <div class="column is-4 p-0">
                     <picture class="image is-16by9">

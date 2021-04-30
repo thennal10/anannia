@@ -21,8 +21,27 @@ logourl: assets/chilla-logo-text.png
             Chilla is supported by organisations like Kerala Partnership, Asha for Education and Sangama, as well as funds raised locally.
         </p>
     </div>
-    <div class="container mt-6 p-4 has-background-info-light">
-        <p class="title has-text-grey-dark"><a href="{{site.data.links.activities}}">Recent Activities</a></p>
+    <div class="container mt-6 p-4">
+        <p class="title has-text-grey-dark">Recent Activities</p>
+        <p class="is-size-5-desktop">
+            The COVID-19 pandemic has ravaged the world for over a year, and the current second wave swarming through India is 
+            breaking records in case numbers. In these trying times, we have cooperated with the Government of Kerala to 
+            release these three snippets urging us all to take proper precautions in order to defeat COVID-19.
+        </p>
+        <br>
+        <div class="columns is-variable is-1">
+            <div class="column">
+                <video src="assets/asha_pallavi_btc.webm" poster="assets/asha_pallavi_btc.jpg" controls></video>
+            </div>
+            <div class="column">
+                <video src="assets/anil_btc.webm" controls></video>
+            </div>
+            <div class="column">
+                <video src="assets/sidharth_btc.webm" controls></video>
+            </div>
+        </div>
+
+        <p class="title has-text-grey-dark"><a href="{{site.data.links.activities}}">Other Activities</a></p>
         <div class="columns clickable">
             <!-- Assigning list reversesd to a seperate variable because of the way limit works -->
             {% assign activities = site.general_activities | sort: 'date' | reverse %}

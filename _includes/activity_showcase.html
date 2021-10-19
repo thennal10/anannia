@@ -1,0 +1,23 @@
+<div class="columns clickable">
+    <!-- Assigning list reversesd to a seperate variable because of the way limit works -->
+    {% assign actlist = site.general_activities | sort: 'date' | reverse %}
+    {% if include.tag == 'none' %}
+        {% assign activities = actlist %}
+    {% else %}
+        {% assign activities = actlist | where: 'tag', include.tag %}
+    {% endif %}
+    {% for activity in activities limit:3 %}
+        <div class="column">
+            <a href="{{site.data.links.activities}}">
+            <div class="box pt-0 px-0 has-background-warning-light">
+                <picture class="image is-16by9">
+                    <source srcset="assets/activity_images/{{activity.image}}.webp" type="image/webp">
+                    <source srcset="assets/activity_images/{{activity.image}}.png" type="image/png">
+                    <img src="assets/activity_images/{{activity.image}}.png" class="object-fit-cover">
+                </picture>
+                <p class="is-size-4 has-text-centered"><b> {{ activity.title }} </b></p>
+            </div>
+            </a>
+        </div>
+    {% endfor %}
+</div>

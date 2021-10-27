@@ -1,0 +1,38 @@
+---
+layout: default
+title: Center for Gender and Sexuality
+banner: gender
+herosize: is-medium
+herobody: herotext.html
+herotitle: Center for Gender and Sexuality
+---
+<section class="section">
+    <div class="container content is-size-5-desktop">
+        <p class="title">Because queer rights matter.</p>
+        <strong class="has-text-danger-dark">The Center for Gender and Sexuality</strong> is a project meant to fight for
+        civil rights and social acceptance of the LGBTQI+ community. Our work includes organizing large queer events such
+        as the Kerala Transgender Sports Meetup, help individual members in the community like Adam Harry, India's first
+        transman pilot, and campaigning for foundational legislative changes, such as the Kerala Transgender Policy.
+    </div>
+    <div class="container">
+        <p class="title has-text-grey-dark"><a href="{{site.data.links.activities}}">News and Events</a></p>
+        {% include activity_showcase.html tag='gender' %}
+    </div>
+    <div class="container">
+        <p class="title">
+            Gallery
+        </p>
+            <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
+                {% for image in site.static_files %}
+                    {% if image.path contains 'center_for_sexuality_gallery' %}
+                        <img src="{{ site.baseurl }}{{ image.path }}" 
+                            alt="image" 
+                            style="height: 20vh"
+                            class="m-2"
+                        />
+                    {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+
+</section>

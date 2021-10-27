@@ -20,30 +20,6 @@ herobody: herofrontpage.html
             <a href={{ site.data.links.about }} class="button is-info is-medium is-light block">Read more</a>
         </div>
     </section>
-    <section id="campaigns">
-        <div class="container has-text-centered">
-            <p class="title">Campaigns</p>
-            <div class="columns has-background-info-light p-3">
-                <div class="column is-4">
-                    <figure class="image ">
-                        <img src="assets/phone_stock.jpg">
-                    </figure>
-                </div>
-                <div class="column is-8 is-size-5 has-text-centered">
-                    <p class="title">Smartphone Donation Drive</p>
-                    <p>
-                        The digital divide is a stark reality facing the education sector of Kerela,
-                        as a significant portion of the children do not have access to any digital device
-                        necessary for attending online classes. In order to bridge the digital gap, we are
-                        conducting a donation drive to supply underpriviledged children with smartphones, costing
-                        roughly ₹7500. Every donation, no matter how small, helps in the cause. Donations of old
-                        but functional smartphones, tablets, laptops, etc. are also welcome.
-                    </p>
-                    <button href={{ site.data.links.interns }} class="button is-info has-text-weight-bold is-medium mt-2 donate">DONATE</button>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="section" id="projects">
         <div class="container has-text-centered">
             <p class="title">Our Projects</p>
@@ -94,8 +70,8 @@ herobody: herofrontpage.html
                     </div>
                 </a>
 
-                <div class="column is-one-third">
-                    <div class="box pt-0 px-0 has-background-danger-light" id="lgbtq-button">
+                <a href={{ site.data.links.gender }} class="column is-one-third">
+                    <div class="box pt-0 px-0 has-background-danger-light">
                         <picture class="image is-3by2">
                             <source srcset="assets/pride.webp" type="image/webp">
                             <source srcset="assets/pride.jpg" type="image/jpg">
@@ -104,8 +80,38 @@ herobody: herofrontpage.html
                         <p class="title is-size-4 mt-2">Centre for Gender and Sexuality</p>
                         <p class="subtitle">Because queer rights matter.</p>
                     </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="campaigns">
+        <div class="container has-text-centered">
+            <p class="title">Campaigns</p>
+            <div class="columns has-background-info-light p-3">
+                <div class="column is-4">
+                    <figure class="image ">
+                        <img src="assets/phone_stock.jpg">
+                    </figure>
+                </div>
+                <div class="column is-8 is-size-5 has-text-centered">
+                    <p class="title">Smartphone Donation Drive</p>
+                    <p>
+                        The digital divide is a stark reality facing the education sector of Kerela,
+                        as a significant portion of the children do not have access to any digital device
+                        necessary for attending online classes. In order to bridge the digital gap, we are
+                        conducting a donation drive to supply underpriviledged children with smartphones, costing
+                        roughly ₹7500. Every donation, no matter how small, helps in the cause. Donations of old
+                        but functional smartphones, tablets, laptops, etc. are also welcome.
+                    </p>
+                    <button href={{ site.data.links.interns }} class="button is-info has-text-weight-bold is-medium mt-2 donate">DONATE</button>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="section" id="news">
+        <div class="container has-text-centered has-background-success-light p-3">
+            <p class="title">News and Events</p>
+            {% include activity_showcase.html tag='none' %}
         </div>
     </section>
     <section id="help" class="section container is-max-desktop">
@@ -324,25 +330,6 @@ herobody: herofrontpage.html
                     and comprehensive, from classic novels to picture books. Our goal is to maintain a diverse
                     collection of literature required to support the needs and complement the growth of our children.
                     The creation of a virtual library is also in the works.
-                </p>
-            </div>
-        </div>
-        <div class="modal" id="lgbtq-modal">
-            <div class="modal-background">
-                <button class="modal-close is-large" aria-label="close"></button>
-            </div>
-            <div class="modal-content box has-background-danger-light has-text-centered">
-                <picture class="image">
-                    <source srcset="assets/pride.webp" type="image/webp">
-                    <source srcset="assets/pride.png" type="image/jpg">
-                    <img src="assets/pride.jpg">
-                </picture>
-                <p class="title mt-3">Center for Gender and Sexuality</p>
-                <p class="is-size-5-desktop has-text-justified">
-                    <strong class="has-text-danger-dark">The Center for Gender and Sexuality</strong> is a project meant to fight for
-                    civil rights and social acceptance of the LGBTQI+ community. Our work includes organizing large queer events such
-                    as the Kerala Transgender Sports Meetup, help individual members in the community like Adam Harry, India's first
-                    transman pilot, and campaigning for foundational legislative changes, such as the Kerala Transgender Policy.
                 </p>
             </div>
         </div>

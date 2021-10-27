@@ -19,7 +19,8 @@ $banners: (
     "home"  "../assets/banner.webp" 0.4,
     "chilla"  "../assets/banner-chilla.webp" 0.4, 
     "lifeskill"  "../assets/lifeskill_banner.webp" 0.3,
-    "intern"  "../assets/intern_banner.webp" 0.0
+    "intern"  "../assets/intern_banner.webp" 0.0,
+    "gender" "../assets/pride.webp" 0.4
     );
 
 @each $name, $url, $overlay-percent in $banners {

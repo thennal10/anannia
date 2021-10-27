@@ -53,10 +53,6 @@ $(document).ready(function () {
         $("#arivu-modal").addClass("is-active");
     })
 
-    $("#lgbtq-button").click(function() {
-        $("#lgbtq-modal").addClass("is-active");
-    })
-
     $("#celebrate-button").click(function() {
         $("#celebrate-modal").addClass("is-active");
     })

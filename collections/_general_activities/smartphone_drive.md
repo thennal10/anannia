@@ -7,4 +7,4 @@ num: 2
 ---
 Our smartphone donation drive is running successfully, with the support of the donors allowing us to
 supply 20 phones to eligible students of Govt. V&HSS Karakulam and Govt. UPS Karakulam, 
-along with some degree students from various colleges.
+along with some degree students from various colleges. Special thanks to [Punyam](http://punyahome.org) and all our donors.

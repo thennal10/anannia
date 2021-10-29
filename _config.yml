@@ -31,6 +31,7 @@ collections:
   - previous_interns
   - lifeskill_activities
   - general_activities
+  - campaigns
 collections_dir: collections
 
   # Build settings

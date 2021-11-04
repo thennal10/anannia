@@ -6,4 +6,4 @@ tag: chilla
 ---
 The Karakulam Service Cooperative Bank has awarded Aswathy for her 
 academic excellence in earning full A+ in the SSLC examinations. The function was
-inaugurated by the Food, Civil Supplies, Consumer Affairs and Legal Metrology Minister Adv. G.R. Anil.
+inaugurated by Adv. G.R. Anil, Food, Civil Supplies, Consumer Affairs and Legal Metrology Minister.

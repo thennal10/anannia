@@ -15,6 +15,7 @@ Installation instructions are [here](https://jekyllrb.com/docs/installation/). O
 
 1. `git clone https://github.com/thennal10/anannia.git`
 1. `cd anannia`
+1. `bundle install`
 1. `bundle exec jekyll serve`
 1. Visit localhost
 

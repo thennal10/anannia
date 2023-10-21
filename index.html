@@ -24,7 +24,7 @@ herobody: herofrontpage.html
         <div class="container has-text-centered">
             <p class="title">Our Projects</p>
             <div class="columns is-multiline clickable is-4 is-variable">
-                <div class="column mb-3 is-full">
+                <div class="column mb-3 is-two-thirds">
                     <div class="box p-0 has-background-primary-light">
                         <a href={{ site.data.links.chilla }}>
                             <div class="columns">
@@ -45,7 +45,17 @@ herobody: herofrontpage.html
                         </a>
                     </div>
                 </div>
-                
+                <a href={{ site.data.links.habilitation }} class="column is-one-third">
+                    <div class="box pt-0 px-0 has-background-info-light">
+                        <picture class="image is-3by2">
+                            <source srcset="assets/habilitation.webp" type="image/webp">
+                            <source srcset="assets/habilitation.jpg" type="image/jpg"> 
+                            <img src="assets/habilitation.jpg">
+                        </picture>
+                        <p class="title is-size-4 mt-2">Centre for Habilitation</p>
+                        <p class="subtitle">Igniting confidence, inspiring change.</p>
+                    </div>
+                </a>
                 <a href={{ site.data.links.earlychildhood }} class="column is-one-third">
                     <div class="box pt-0 px-0 has-background-info-light">
                         <picture class="image is-3by2">
@@ -240,29 +250,29 @@ herobody: herofrontpage.html
                         <span>Bank Details</span>
                         </a>
                     </li>
-                    </ul>
-                </div>
-                <div class="is-hidden" id="online-donation">
-                    <p>Please select whether you are a <strong>foreign</strong> or <strong>Indian</strong> donor below.</p>
-                    <div class="mt-3" style="margin-bottom: 5rem;">
-                        <div class="dropdown">
-                            <div class="dropdown-trigger">
-                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span>Click here to select...</span>
-                                <span class="icon is-small">
-                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </button>
+                </ul>
+            </div>
+            <div class="is-hidden" id="online-donation">
+                <p>Please select whether you are a <strong>foreign</strong> or <strong>Indian</strong> donor below.</p>
+                <div class="mt-3" style="margin-bottom: 2rem;">
+                    <div class="dropdown">
+                        <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <span>Click here to select...</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
                             </div>
                             <div class="dropdown-menu is-active has-text-left">
-                            <div class="dropdown-content">
-                                <a class="dropdown-item" data-url="https://rzp.io/l/ananniaforeigndonations">
-                                Foreign Donor
-                                </a>
-                                <a class="dropdown-item" data-url="https://rzp.io/l/vcn5GiW">
-                                Indian Donor
-                                </a>
-                            </div>
+                                <div class="dropdown-content">
+                                    <a class="dropdown-item" data-url="https://rzp.io/l/ananniaforeigndonations">
+                                        Foreign Donor
+                                    </a>
+                                    <a class="dropdown-item" data-url="https://rzp.io/l/vcn5GiW">
+                                        Indian Donor
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <button class="button is-success p-0" id="donation-continue-button" disabled>
@@ -270,6 +280,7 @@ herobody: herofrontpage.html
                                 <img src="assets/tick.png">
                             </figure>
                         </button>
+                        <p class="mt-4"><strong>Indian donors</strong> can also use the following UPI ID for donations: <strong>sbi.00941@sbi.co.in</strong></p>
                     </div>
                 </div>
                 <div class="columns has-text-left is-hidden" id="bank-details">
@@ -293,6 +304,7 @@ herobody: herofrontpage.html
                             Branch name: SBI Thirumala Branch.<br>
                             Branch code : 70022<br>
                             IFSC Code: SBIN0070022<br>
+                            UPI ID: <strong>sbi.00941@sbi.co.in</strong><br>
                         </p>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     // Slick
     $('.interns').slick({
         infinite: false,
@@ -57,6 +58,7 @@ $(document).ready(function () {
         $("#celebrate-modal").addClass("is-active");
     })
 
+    /* - Donation Things - */
     // Donations tabs
     $("#bank-details-option").click(function() {
         $("#bank-details").removeClass("is-hidden");
@@ -80,6 +82,25 @@ $(document).ready(function () {
 
     $("#donation-continue-button").click(function() {
         window.open(donation_link);
+    });
+
+    // Function to check the URL hash
+    function checkHash() {
+        if(window.location.hash) {
+            var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+            if (hash === "donate") { // If the hash is the one we're looking for
+                $("#donation-modal").addClass("is-active");
+            }
+            // You can add else ifs here for other modals if necessary
+        }
+    }
+
+    // Call the function on page load
+    checkHash();
+    
+    // Also, to ensure the modal opens when users navigate back (using the browser's back button), you need to listen for a hash change in the URL
+    $(window).on('hashchange', function() {
+        checkHash();
     });
 
     // "Want to help?" tab thing

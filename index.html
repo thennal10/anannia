@@ -253,48 +253,37 @@ herobody: herofrontpage.html
                 </ul>
             </div>
             <div class="is-hidden" id="online-donation">
-                <p>Please select whether you are a <strong>foreign</strong> or <strong>Indian</strong> donor below.</p>
                 <div class="mt-3" style="margin-bottom: 2rem;">
                     <div class="dropdown">
                         <div class="dropdown-trigger">
-                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                    <span>Click here to select...</span>
-                                    <span class="icon is-small">
-                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                </button>
-                            </div>
-                            <div class="dropdown-menu is-active has-text-left">
-                                <div class="dropdown-content">
-                                    <a class="dropdown-item" data-url="https://rzp.io/l/ananniaforeigndonations">
-                                        Foreign Donor
-                                    </a>
-                                    <a class="dropdown-item" data-url="https://rzp.io/l/vcn5GiW">
-                                        Indian Donor
-                                    </a>
-                                </div>
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                <span>Click here to select...</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu is-active has-text-left">
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" data-url="https://rzp.io/l/vcn5GiW">
+                                    Indian Donor
+                                </a>
                             </div>
                         </div>
-                        <button class="button is-success p-0" id="donation-continue-button" disabled>
-                            <figure class="image is-32x32">
-                                <img src="assets/tick.png">
-                            </figure>
-                        </button>
-                        <p class="mt-4"><strong>Indian donors</strong> can also use the following UPI ID for donations: <strong>sbi.00941@sbi.co.in</strong></p>
                     </div>
+                    <button class="button is-success p-0" id="donation-continue-button" disabled>
+                        <figure class="image is-32x32">
+                            <img src="assets/tick.png">
+                        </figure>
+                    </button>
+                    <p class="mt-4"><strong>Indian donors</strong> can also use the following UPI ID for donations: <strong>sbi.00941@sbi.co.in</strong></p>
                 </div>
-                <div class="columns has-text-left is-hidden" id="bank-details">
-                    <div class="column">
-                        <p class="title is-size-4">Foreign Donors</p>
-                        <p>
-                            Bank Name: State Bank of India<br>
-                            Account Holder: ANANNIA<br>
-                            Account Number: 00000040108040193<br>
-                            Branch Name: SBI New Delhi Main Branch<br>
-                            Branch Code: 00691<br>
-                            Swift Code: SBININBB104<br>
-                        </p>
-                    </div>
+            </div>
+            <p class="is-size-6 has-text-grey pb-4">
+                <strong>Foreign donations</strong> are <strong>currently unavailable.</strong> 
+                Please contact us directly if you wish to make such a donation.
+            </p>
+                <div class="columns has-text-centered is-hidden" id="bank-details">
                     <div class="column">
                         <p class="title is-size-4">Indian Donors</p>
                         <p>

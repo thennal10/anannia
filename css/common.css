@@ -7647,4 +7647,9 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     .blue-gradient-ltr {
       background: linear-gradient(180deg, skyblue 30%, transparent 100%); } }
 
+.profile-pic {
+  width: 256px;
+  height: 256px;
+  margin-inline: auto; }
+
 /*# sourceMappingURL=common.css.map */

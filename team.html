@@ -1,0 +1,98 @@
+---
+layout: default
+title: Our Team
+banner: chilla
+herosize: is-small
+herobody: herotext.html
+herotitle: Our Team
+---
+
+<section class="section">
+    <div class="container">
+        <h1 class="title has-text-centered"> General Team</h1>
+        <div class="columns is-centered is-multiline">
+            {% for member in site.data.general %}
+            <div class="column is-one-third">
+                <div class="card is-shadowless">
+                    <div class="card-image">
+                        <figure class="image profile-pic">
+                            <img class="is-rounded" src="{{ member.image }}" alt="{{ member.name }}">
+                        </figure>
+                    </div>
+                    <div class="card-content has-text-centered">
+                        <p class="title is-3 has-text-primary-dark">{{ member.name }}</p>
+                        <p class="subtitle is-5 has-text-grey-dark mb-0">{{ member.role }}</p>
+                        <p class="subtitle is-6 has-text-grey">{{ member.email }}</p>
+                        <div class="content mt-1 has-text-justified">
+                            <p>{{ member.bio }}</p>
+                            {% if member.achievement_url %}
+                            <a href="{{ member.achievement_url }}" class="button is-primary is-light mt-2">
+                                View Achievements
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h1 class="title has-text-centered"> Office Bearers</h1>
+        <div class="columns is-centered is-multiline">
+            {% for member in site.data.office %}
+            <div class="column is-4">
+                <div class="card is-shadowless">
+                    <div class="card-image">
+                        <figure class="image profile-pic">
+                            <img class="is-rounded" src="{{ member.image }}" alt="{{ member.name }}">
+                        </figure>
+                    </div>
+                    <div class="card-content has-text-centered">
+                        <p class="title is-3 has-text-primary-dark">{{ member.name }}</p>
+                        <p class="subtitle is-5 has-text-grey-dark">{{ member.role }}</p>
+                        <div class="content mt-1 has-text-justified">
+                            <p>{{ member.bio }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h1 class="title has-text-centered">Executive Members</h1>
+
+        <div class="columns is-multiline">
+            {% for member in site.data.executive_members %}
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-square">
+                            <img class="" src="{{ member.image }}" alt="{{ member.name }}">
+                        </figure>
+                    </div>
+                    <div class="card-content has-background-primary-light">
+                        <p class="title is-4">{{ member.name }}</p>
+                        <p class="subtitle is-6 has-text-grey-dark">{{ member.designation }}</p>
+                        <div class="content">
+                            <p>
+                                <strong>Contact:</strong> 
+                                <a class="has-text-grey-dark" href="tel:+91 {{ member.contact }}">+91 {{ member.contact }}</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+</section class

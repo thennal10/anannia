@@ -1,10 +1,10 @@
 {% assign letterstring = "a,b,c,d,e,f,g,h,i,j,k,l,m,n" %}
 {% assign letters = letterstring | split: ',' %}
-
+{% assign number = include.number | minus: 1 %}
 <div class="carousel__holder">
-    <div class="carousel">
+    <div id="carousel{{ number }}" class="carousel">
         {% for item in include.images %}
-          <input class="carousel__activator" type="radio" name="carousel" id="{{ letters[forloop.index0] }}" {% if forloop.first %}checked="checked"{% endif %} />
+          <input class="carousel__activator" type="radio" name="carousel{{ number }}" id="{{ number }}{{ letters[forloop.index0] }}" {% if forloop.first %}checked="checked"{% endif %} />
         {% endfor %}
         {% for item in include.images %}
           {% if forloop.index == forloop.length %}
@@ -20,20 +20,20 @@
           {% endif %}
           {% assign prevletter = letters[previndex] %}
           <div class="carousel__controls">
-              <label class="carousel__control carousel__control--backward" for="{{ prevletter }}"></label>
-              <label class="carousel__control carousel__control--forward" for="{{ nextletter }}"></label>
+              <label class="carousel__control carousel__control--backward" for="{{ number }}{{ prevletter }}"></label>
+              <label class="carousel__control carousel__control--forward" for="{{ number }}{{ nextletter }}"></label>
           </div>
         {% endfor %}
         <div class="carousel__track">
           <ul>
             {% for item in include.images %}
-            <li class="carousel__slide" style="background-image: url('assets/activity_images/{{- item }}.webp');"></li>
+            <li class="carousel__slide" style="background-image: url('{{ item }}');"></li>
             {% endfor %}
           </ul>
         </div>
         <div class="carousel__indicators">
             {% for item in include.images %}
-              <label class="carousel__indicator" for="{{ letters[forloop.index0] }}"></label>
+              <label class="carousel__indicator" for="{{ number }}{{ letters[forloop.index0] }}"></label>
             {% endfor %}
         </div>
     </div>
@@ -209,7 +209,7 @@
   {% if include.duration %}
   setInterval(function(){
     var j=0;
-    var elements = document.querySelectorAll('.carousel__control--forward');
+    var elements = document.querySelectorAll('#carousel{{ number}} .carousel__control--forward');
     for(i=(elements.length - 1);i>-1;i--) {
       if(isVisible(elements[i])) j=i;
     }

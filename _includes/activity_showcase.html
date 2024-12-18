@@ -1,8 +1,8 @@
 <div class="tile is-ancestor clickable">
     <div class="tile is-vertical">
-        
+
     <!-- Assigning list reversesd to a seperate variable because of the way limit works -->
-        {% assign actlist = site.general_activities | sort: 'date' | reverse %}
+        {% assign actlist = site.posts | sort: 'date' | reverse %}
         {% if include.tag == 'none' %}
             {% assign activities = actlist %}
         {% else %}
@@ -17,19 +17,12 @@
                 <div class="tile is-child p-4">
                     <a href="{{site.data.links.activities}}">
                     <div class="box pt-0 px-0 has-background-warning-light">
-                        {% if activity.num %}
-                            {% assign imglist="" %}
-                            {% for i in (1..activity.num) %}
-                                {% assign imname = activity.image | append: "_" | append: i%}
-                                {% assign imglist = imglist | append: imname | append: ", " %}
-                            {% endfor %}
-                            {% assign images = imglist | split: ", " %}
-                            {% include carousel.html images=images duration="7" %}
+                        {% if activity.images.size > 1 %}
+                            {% assign carouselidx = forloop.index | plus: offs %}
+                            {% include carousel.html images=activity.images duration="7" number=carouselidx%}
                         {% else %}
                             <picture class="image is-16by9">
-                                <source srcset="assets/activity_images/{{activity.image}}.webp" type="image/webp">
-                                <source srcset="assets/activity_images/{{activity.image}}.png" type="image/png">
-                                <img src="assets/activity_images/{{activity.image}}.png" class="object-fit-cover">
+                                <img src="{{ activity.images.first }}" class="object-fit-cover">
                             </picture>
                         {% endif %}
                         <p class="is-size-5 has-text-centered"><b> {{ activity.title }} </b></p>

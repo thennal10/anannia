@@ -32,13 +32,15 @@ collections:
   - lifeskill_activities
   - general_activities
   - campaigns
+  - posts
 collections_dir: collections
-
+paginate: 10
+paginate_path: "/activities/:num/"
   # Build settings
 # theme: minima
-# plugins:
-#  - jekyll-feed
-
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

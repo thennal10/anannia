@@ -10,40 +10,28 @@ logourl: /assets/chilla-logo-text.png
 <section class="section">
     <div class="container is-max-widescreen">
         <p class="title">Recent Activities</p>
-        <p class="is-size-5-desktop">
-            The COVID-19 pandemic has ravaged the world for over a year, and the current second wave swarming through India is 
-            breaking records in case numbers. In these trying times, we have cooperated with the Government of Kerala to 
-            release these three snippets urging us all to take proper precautions in order to defeat COVID-19.
-        </p>
-        <br>
-        <div class="columns is-variable is-1">
-            <div class="column">
-                <video src="/assets/asha_pallavi_btc.webm" poster="/assets/asha_pallavi_btc.jpg" controls></video>
-            </div>
-            <div class="column">
-                <video src="/assets/anil_btc.webm" controls></video>
-            </div>
-            <div class="column">
-                <video src="/assets/sidharth_btc.webm" controls></video>
-            </div>
-        </div>
         {% for activity in paginator.posts %}
+        {% if activity.special %}
+            {{ activity.content }}
+        {% else %}
         <div class="columns box has-background-primary-light my-5 p-0">
-            <div class="column is-4 p-0">
-                {% if activity.images.size > 1 %}
-                    {% assign carouselidx = forloop.index | plus: offs %}
-                    {% include carousel.html images=activity.images duration="7" number=carouselidx%}
-                {% else %}
-                    <picture class="image is-16by9">
-                        <img src="{{ activity.images.first }}" class="object-fit-cover">
-                    </picture>
-                {% endif %}
+                <div class="column is-4 p-0">
+                    {% if activity.images.size > 1 %}
+                        {% assign carouselidx = forloop.index | plus: offs %}
+                        {% include carousel.html images=activity.images duration="7" number=carouselidx%}
+                    {% else %}
+                        <picture class="image">
+                            <img src="{{ activity.images.first }}" class="object-fit-cover">
+                        </picture>
+                    {% endif %}
+                </div>
+                <div class="column is-size-5 is-size-6-mobile">
+                    <p class="is-size-4 is-size-5-mobile title">{{ activity.title }}</p>
+                    <p class="is-size-5 is-size-6-mobile subtitle has-text-grey">{{ activity.date | date: "%B %d, %Y" }}</p>
+                    {{activity.content}}
+                </div>
             </div>
-            <div class="column is-size-5 is-size-6-mobile">
-                <p class="is-size-4 is-size-5-mobile title">{{ activity.title }}</p>
-                {{activity.content}}
-            </div>
-        </div>
+        {% endif %}
         {% endfor %}
     </div>
     <div class="container is-max-widescreen">

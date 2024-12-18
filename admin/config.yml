@@ -1,0 +1,26 @@
+# config.yml
+
+backend:
+  name: github
+  repo: thennal10/anannia
+  branch: main # Branch to update (optional; defaults to master)
+  base_url: https://sveltia-cms-auth.thennal10.workers.dev/
+media_folder: 'assets/uploads'
+collections:
+  - name: 'activities'
+    label: 'Activities'
+    folder: 'collections/_posts'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Tag', name: 'tag', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      -  {
+        label: 'Images',
+          name: 'images',
+          widget: 'list',
+          summary: '{{fields.image}}',
+          field: { label: Image, name: image, widget: image }
+      }
